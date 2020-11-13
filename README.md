@@ -26,5 +26,25 @@ from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
 ```
 
+**Modifications to /home/crbturkle/turkle/turkle_site/settings.py
+```python
+...
+STATIC_ROOT = '/home/crbturkle/turkle/turkle/static'
+STATIC_URL = '/static/'
+...
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': '/home/crbturkle/turkle/db.sqlite3',
+    }
+}
+...
+# Local time zone for this installation. Choices can be found here:
+# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
+# although not all choices may be available on all operating systems.
+# In a Windows environment this must be set to your system time zone.
+TIME_ZONE = 'Pacific/Guam'
+```
+
     
     
