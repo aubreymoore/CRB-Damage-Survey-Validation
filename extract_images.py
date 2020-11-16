@@ -9,6 +9,7 @@ import spatialite
 VIDEODIR='/home/aubrey/Desktop/Guam-CRB-damage-map-2020-10/videos'
 #IMAGEDIR='/home/aubrey/Desktop/CRB-Damage-Survey-Validation/random_trees'
 DATABASE='/home/aubrey/Desktop/Guam-CRB-damage-map-2020-10/Guam01.db'
+GITHUBURL='https://github.com/aubreymoore/CRB-Damage-Survey-Validation'
 SAMPLESIZE=10
 
 
@@ -76,6 +77,7 @@ def main(IMAGEDIR,
          equal_samples: ('equal sample size for each damage index', 'flag', 'e'),
          VIDEODIR=VIDEODIR,
          DATABASE=DATABASE,
+         GITHUBURL=GITHUBURL,
          SAMPLESIZE=SAMPLESIZE
          ):
 
@@ -107,6 +109,10 @@ def main(IMAGEDIR,
     def format_image_file_name(r):
         return f'{r.name:03}.jpg'
 
+    def format_image_url(r):
+        # Example: https://github.com/aubreymoore/CRB-Damage-Survey-Validation/raw/main/batch1/000.jpg
+        return f'{GITHUBURL}/raw/main/{IMAGEDIR}/{r.image_file_name}'
+
     run_randy(equal_samples)
     os.mkdir(IMAGEDIR)
     conn = spatialite.connect(DATABASE)
@@ -114,6 +120,7 @@ def main(IMAGEDIR,
     df = df.apply(parse_bounding_box_column, axis=1)
     df.drop('bounding_box', axis=1, inplace=True)
     df['image_file_name'] = df.apply(format_image_file_name, axis=1)
+    df['image_url'] = df.apply(format_image_url, axis=1)
     df.to_csv(f'{IMAGEDIR}/index.csv', index=False)
     for i, r in df.iterrows():
         video = f'{VIDEODIR}/{r.video}'
