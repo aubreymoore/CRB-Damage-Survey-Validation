@@ -75,3 +75,7 @@ DATABASES = {
 # In a Windows environment this must be set to your system time zone.
 TIME_ZONE = 'Pacific/Guam'
 ```
+
+## Doin It
+
+https://crbturkle.pythonanywhere.com/admin/turkle/project/add/
