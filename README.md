@@ -3,50 +3,33 @@ Coconut rhinoceros beetle damage index assessed by object detectors is validated
 
 ## Selecting Random Images of Trees Located in Videos
 
-**randy.sh** (in this repo)
 ```bash
-#!/bin/bash
+aubrey@tensorbook2:~/Desktop/CRB-Damage-Survey-Validation$ python3 extract_images.py -h
+usage: extract_images.py [-h] [-e] IMAGEDIR [VIDEODIR] [DATABASE] [SAMPLESIZE]
 
-echo "Bash version ${BASH_VERSION}"
+Aubrey Moore 2020-11-17
 
-spatialite -batch $1 <<EOF
-DROP TABLE IF EXISTS randy;
-CREATE TABLE randy (video, frame_number, damage_index, bounding_box);
-EOF
+This script selects tree images at random (without replacement) from the SpatiaLite database specified by the global
+variable DATABASE. These images are stored in a folder specified by IMAGEDIR, along with a CSV file, index.csv,
+which contains metadata for the images.
 
-# Get 20 random records, without replacement, for each damage group
+If the flag, equal_samples, is used, SAMPLESIZE//5 tree objects are selected for each of the 5 damage classes.
+Otherwise, SAMPLESIZE tree objects are randomly selected from the total population of tree objects.
 
-for i in {0..4}
-do
-spatialite -batch $1 <<EOF
-INSERT INTO randy
-SELECT 
-    videos.name AS video, 
-    frames.frame_number, 
-    trees.damage_index, 
-    AsText(trees.geometry) AS bounding_box
-FROM trees, frames, videos 
-WHERE damage_index = $i 
-    AND trees.frame_id=frames.id
-    AND frames.video_id=videos.id
-ORDER BY RANDOM() 
-LIMIT 20;
-EOF
-done
+positional arguments:
+  IMAGEDIR
+  VIDEODIR             [/home/aubrey/Desktop/Guam-CRB-damage-
+                       map-2020-10/videos]
+  DATABASE             [/home/aubrey/Desktop/Guam-CRB-damage-
+                       map-2020-10/Guam01.db]
+  SAMPLESIZE           [10]
 
-# Shuffle records in the randy table and write to a CSV file
-
-spatialite -batch $1 <<EOF
-.headers on
-.mode csv
-.separator '|'
-.output random-trees.csv
-SELECT * FROM randy ORDER BY RANDOM();
-.output stdout
-EOF
-
-echo 'Data written to random-trees.csv'
+optional arguments:
+  -h, --help           show this help message and exit
+  -e, --equal-samples  equal sample size for each damage index
 ```
+
+
 
 ## Deploying Turkle on PythonAnywhere
 
