@@ -92,10 +92,3 @@ DATABASES = {
 # In a Windows environment this must be set to your system time zone.
 TIME_ZONE = 'Pacific/Guam'
 ```
-
-## Extracting Images from Videos
-
- ## Creating a Turkle Job
- 
-    
-    
