@@ -7,10 +7,9 @@ import subprocess
 import spatialite
 
 VIDEODIR='/home/aubrey/Desktop/Guam-CRB-damage-map-2020-10/videos'
-#IMAGEDIR='/home/aubrey/Desktop/CRB-Damage-Survey-Validation/random_trees'
 DATABASE='/home/aubrey/Desktop/Guam-CRB-damage-map-2020-10/Guam01.db'
 GITHUBURL='https://github.com/aubreymoore/CRB-Damage-Survey-Validation'
-SAMPLESIZE=10
+SAMPLESIZE=100
 
 
 def run_randy(equal_samples):
