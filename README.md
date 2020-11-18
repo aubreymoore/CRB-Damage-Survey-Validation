@@ -88,7 +88,7 @@ TIME_ZONE = 'Pacific/Guam'
 
 This Turkle site uses an HTML template and CSV data file listed below.
 
-![ ](/home/aubrey/Desktop/CRB-Damage-Survey-Validation/turkle-screenshot.png  "Turkle screen shot")
+![](https://github.com/aubreymoore/CRB-Damage-Survey-Validation/raw/main/turkle-screenshot.png)
 
 #### HTML Template (roadside.html)
 
