@@ -198,7 +198,7 @@ Automated assignment of CRB damage index to performed by an object detector for 
 
 I will test this idea in the following section.
 
-
+## Integrating Info from the V-cuts Object Detector
 
 ``` sql     
 CREATE TABLE trees_vcuts AS
