@@ -200,5 +200,5 @@ It may be possible to improve accuracy by counting v-shaped cuts to each tree ob
 
 See  the [Jupyter notebook](https://github.com/aubreymoore/CRB-Damage-Survey-Validation/blob/main/confusion_matrix.ipynb) which I evaluated results after applying these rules. A marked improvement was achieved:
 
-![](https://github.com/aubreymoore/CRB-Damage-Survey-Validation/raw/main/cm_before.png) 
+![](https://github.com/aubreymoore/CRB-Damage-Survey-Validation/raw/main/cm_after.png) 
 
