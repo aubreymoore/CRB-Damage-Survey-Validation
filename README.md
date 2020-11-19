@@ -12,6 +12,11 @@ I evaluated survey results using the following steps:
 
 ### Step 1: Selecting Random Images of Trees Located in Videos
 
+I used a Python script to generate a random selection of images extracted from survey videos:
+
+```
+python3 extract_images.py batch1 /home/aubrey/Desktop/Guam-CRB-damage-map-2020-10/videos /home/aubrey/Desktop/Guam-CRB-damage-map-2020-10/Guam01.db https://github.com/aubreymoore/CRB-Damage-Survey-Validation 100
+```
 ```
 aubrey@tensorbook2:~/Desktop/CRB-Damage-Survey-Validation$ python3 extract_images.py -h
 usage: extract_images.py [-h] [-e] IMAGEDIR [VIDEODIR] [DATABASE] [SAMPLESIZE]
