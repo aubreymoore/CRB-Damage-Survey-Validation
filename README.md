@@ -12,7 +12,7 @@ I evaluated survey results using the following steps:
 
 ### Step 1: Selecting Random Images of Trees Located in Videos
 
-I used a Python script to generate a random selection of images extracted from survey videos:
+I used a Python script to generate a random selection of images extracted from survey videos. The script places a set of images and an index file containing metadata (index.csv) in an output folder (**batch1** in this case).
 
 ```
 python3 extract_images.py batch1 \
@@ -46,6 +46,7 @@ optional arguments:
   -e, --equal-samples  equal sample size for each damage index
 ```
 
+![](https://github.com/aubreymoore/CRB-Damage-Survey-Validation/raw/main/batch1.png)
 
 ### Step 2: Deploying Turkle on PythonAnywhere
 
