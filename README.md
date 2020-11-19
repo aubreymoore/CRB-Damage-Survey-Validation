@@ -1,6 +1,6 @@
 # CRB-Damage-Survey-Validation
 
-In this project I evaluate results of the first automated roadside videosurvey to measure coconut rhinoceros beetle (CRB) damage on Guam. These results are available in a another GitHub repo, https://github.com/aubreymoore/Guam-CRB-damage-map-2020-10, which stores videos using [LFS](https://git-lfs.github.com/)  and a SpatiaLite survey database.  The repo also hosts an [online interactive map](https://aubreymoore.github.io/Guam-CRB-damage-map-2020-10/).
+In this project I evaluate results of the first automated roadside videosurvey to measure coconut rhinoceros beetle (CRB) damage on Guam. Survey results are available in a another GitHub repo, https://github.com/aubreymoore/Guam-CRB-damage-map-2020-10, which stores videos using [LFS](https://git-lfs.github.com/)  and a SpatiaLite survey database.  The repo also hosts an [online interactive map](https://aubreymoore.github.io/Guam-CRB-damage-map-2020-10/).
 
 ## METHODS
 
