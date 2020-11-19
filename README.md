@@ -198,7 +198,7 @@ It may be possible to improve accuracy by counting v-shaped cuts to each tree ob
  
      SET damage_index=0 WHERE damage_index=2 and vcut_count=0
 
-See  the [Jupyter notebook](https://github.com/aubreymoore/CRB-Damage-Survey-Validation/blob/main/confusion_matrix.ipynb) which I evaluated results after applying these rules. A marked improvement was achieved:
+See  the [Jupyter notebook](https://github.com/aubreymoore/CRB-Damage-Survey-Validation/blob/main/confusion_matrix.ipynb) which I evaluated results after applying these rules. A marked improvement was achieved. After applying the 3 rules, accuracy was increased from 51% to 68% and the false positive rate decreased from 39% to 1%.
 
 ![](https://github.com/aubreymoore/CRB-Damage-Survey-Validation/raw/main/cm_after.png) 
 
