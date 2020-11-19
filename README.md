@@ -12,7 +12,7 @@ I evaluated survey results using the following steps:
 
 ### Step 1: Selecting Random Images of Trees Located in Videos
 
-```bash
+```
 aubrey@tensorbook2:~/Desktop/CRB-Damage-Survey-Validation$ python3 extract_images.py -h
 usage: extract_images.py [-h] [-e] IMAGEDIR [VIDEODIR] [DATABASE] [SAMPLESIZE]
 
