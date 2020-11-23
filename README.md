@@ -6,11 +6,6 @@ Validation was performed by having a human assign a damge index (0 to 4) to each
 
 A marked improvement was achieved by adjusting damage ratings based on presence/absence of v-shaped cuts (detected by a second object detector). After adjustment, accuracy was increased from 51% to 68% and the false positive rate decreased from 39% to 1%. A modified interactive noline map is available here at https://aubreymoore.github.io/new-crb-damage-map.
 
-### Improvement After Including Info from the V-shaped Object Detector Before Assigning Damage Levels
-
-See  the [Jupyter notebook](https://github.com/aubreymoore/CRB-Damage-Survey-Validation/blob/main/confusion_matrix.ipynb) which I evaluated results after applying the above rules. A marked improvement was achieved. After applying the 3 rules, accuracy was increased from 51% to 68% and the false positive rate decreased from 39% to 1%.
-
-
 ## METHODS
 
 I evaluated survey results using the following steps:
