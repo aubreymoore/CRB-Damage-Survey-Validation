@@ -2,6 +2,15 @@
 
 In this project I evaluate results of the first automated roadside videosurvey to measure coconut rhinoceros beetle (CRB) damage on Guam. Survey results are available in a another GitHub repo, https://github.com/aubreymoore/Guam-CRB-damage-map-2020-10, which stores videos using [LFS](https://git-lfs.github.com/)  and a SpatiaLite survey database.  The repo also hosts an [online interactive map](https://aubreymoore.github.io/Guam-CRB-damage-map-2020-10/).
 
+Validation was performed by having a human assign a damge index (0 to 4) to each of 100 tree images at selected at random. Human classification was then compared to machine cassification.  Results yielded 51% accuracy (machine classification in agreement with huma classification) and a 39% false positive rate (where the machine found CRB damage, but the human did not).
+
+A marked improvement was achieved by adjusting damage ratings based on presence/absence of v-shaped cuts (detected by a second object detector). After adjustment, accuracy was increased from 51% to 68% and the false positive rate decreased from 39% to 1%. A modified interactive noline map is available here at https://aubreymoore.github.io/new-crb-damage-map.
+
+### Improvement After Including Info from the V-shaped Object Detector Before Assigning Damage Levels
+
+See  the [Jupyter notebook](https://github.com/aubreymoore/CRB-Damage-Survey-Validation/blob/main/confusion_matrix.ipynb) which I evaluated results after applying the above rules. A marked improvement was achieved. After applying the 3 rules, accuracy was increased from 51% to 68% and the false positive rate decreased from 39% to 1%.
+
+
 ## METHODS
 
 I evaluated survey results using the following steps:
